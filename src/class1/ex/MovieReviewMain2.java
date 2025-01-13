@@ -2,27 +2,34 @@ package class1.ex;
 
 public class MovieReviewMain2 {
     public static void main(String[] args) {
-        MovieReview movie1 = new MovieReview();
-        movie1.title = "인셉션";
-        movie1.review = "인생은 무한 루프";
+        // 리뷰에 배열
+        MovieReview[] reviews = new MovieReview[2];
 
-        MovieReview movie2 = new MovieReview();
-        movie2.title = "어바웃 타임";
-        movie2.review = "인생 시간 영화!";
+        MovieReview inception = new MovieReview();
+        inception.title = "인셉션";
+        inception.review = "인생은 무한 루프";
+        reviews[0] = inception;
+
+        MovieReview aboutTime = new MovieReview();
+        aboutTime.title = "어바웃 타임";
+        aboutTime.review = "인생 시간 영화!";
+        reviews[1] = aboutTime;
 
         // 영화에 배열
-//        MovieReview[] movies = {movie1, movie2};
+//        MovieReview[] movies = {inception, aboutTime};
 //
 //        for (int i = 0; i < movies.length; i++) {
 //            System.out.println("영화 제목: " + movies[i].title + ", 리뷰: " + movies[i].review);
 //        }
 
-        // 리뷰에 배열
-        MovieReview[] reviews = {movie1, movie2};
 
-        for (int i = 0; i < reviews.length; i++) {
-           System.out.println("영화 제목: " + reviews[i].title + ", 리뷰: " + reviews[i].review);
+        for (MovieReview review : reviews) {
+            System.out.println("영화 제목: " + review.title + ", 리뷰: " + review.review);
         }
+
+//        for (int i = 0; i < reviews.length; i++) {
+//           System.out.println("영화 제목: " + reviews[i].title + ", 리뷰: " + reviews[i].review);
+//        }
 
 
 

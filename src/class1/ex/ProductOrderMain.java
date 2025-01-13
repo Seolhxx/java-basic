@@ -2,29 +2,33 @@ package class1.ex;
 
 public class ProductOrderMain {
     public static void main(String[] args) {
-        ProductOrder productOrder1 =  new ProductOrder();
-        productOrder1.productName = "두부";
-        productOrder1.price = 2000;
-        productOrder1.quantity = 2;
+        ProductOrder[] orders = new ProductOrder[3];
 
-        ProductOrder productOrder2 =  new ProductOrder();
-        productOrder2.productName = "김치";
-        productOrder2.price = 5000;
-        productOrder2.quantity = 1;
+        ProductOrder order1 =  new ProductOrder();
+        order1.productName = "두부";
+        order1.price = 2000;
+        order1.quantity = 2;
+        orders[0] = order1; //배열에 담는 것
 
-        ProductOrder productOrder3 =  new ProductOrder();
-        productOrder3.productName = "콜라";
-        productOrder3.price = 1500;
-        productOrder3.quantity = 2;
+        ProductOrder order2 =  new ProductOrder();
+        order2.productName = "김치";
+        order2.price = 5000;
+        order2.quantity = 1;
+        orders[1] = order2;
 
-        ProductOrder[] ProductOrder= {productOrder1, productOrder2, productOrder3};
+        ProductOrder order3 =  new ProductOrder();
+        order3.productName = "콜라";
+        order3.price = 1500;
+        order3.quantity = 2;
+        orders[2] = order3;
 
-        int sum = 0;
-
-        for (int i = 0; i < ProductOrder.length; i++){
-            System.out.println("상품명: " + ProductOrder[i].productName + ", 가격: " + ProductOrder[i].price + ", 수량: " + ProductOrder[i].quantity);
-            sum += ProductOrder[i].price * ProductOrder[i].quantity;
+        int totalAmount = 0;
+        for (ProductOrder order : orders) {
+            System.out.println("상품명: " + order.productName + ", 가격: " + order.price + ", 수량: " + order.quantity);
+            totalAmount += order.price * order.quantity;
         }
-        System.out.println("총 결제 금액: " + sum);
+        System.out.println("총 결제 금액: " + totalAmount);
+        }
+
     }
-}
+
