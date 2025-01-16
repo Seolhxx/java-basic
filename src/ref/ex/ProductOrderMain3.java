@@ -28,7 +28,7 @@ public class ProductOrderMain3 {
 
         printOrders(orders);
         int totalAmount = getTotalAmount(orders);
-        System.out.println("총 결재 금액: " + totalAmount);
+        System.out.println("총 결제 금액: " + totalAmount);
     }
 
     static ProductOrder createOrder (String productName, int price, int quantity) {
@@ -36,8 +36,7 @@ public class ProductOrderMain3 {
         order.productName = productName;
         order.price = price;
         order.quantity = quantity;
-        return order;
-    }
+        return order;    }
 
     static void printOrders(ProductOrder[] orders) { // 배열의 참조를 넘긴 것
         for (ProductOrder order : orders) {
