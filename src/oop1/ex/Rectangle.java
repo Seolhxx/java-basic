@@ -1,25 +1,18 @@
 package oop1.ex;
 
 public class Rectangle {
-    int width = 5;
-    int height = 8;
-    int area = calculateArea(width, height);
-    int perimeter = calculatePerimeter(width, height);
-    boolean square = isSquare(width, height);
+    int width;
+    int height;
 
-
-    int calculateArea(int width, int height) {
-        System.out.println("넓이: " + area);
+    int calculateArea() { // 매개변수 필요없음 : 자기자신 클래스의 멤버변수 쓰면됨
         return width * height;
     }
 
-    int calculatePerimeter(int width, int height) {
-        System.out.println("둘레 길이: " + perimeter);
+    int calculatePerimeter() {
         return 2 * (width + height);
     }
 
-    boolean isSquare(int width, int height) {
-        System.out.println("정사각형 여부: " + square);
+    boolean isSquare() {
         return width == height;
 
     }
