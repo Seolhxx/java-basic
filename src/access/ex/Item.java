@@ -1,16 +1,23 @@
 package access.ex;
 
 public class Item {
-    private String product;
+    private String name;
     private int price;
     private int quantity;
 
-    public void addItem(String product, int price, int quantity) {
+    public Item(String name, int price, int quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
     }
 
-    public void displayItems(String product, int price, int quantity) {
-        int sum = 0;
-        sum = price * quantity;
-        System.out.println("상품명:" + product + "합계:" + sum);
+    public String getName() {
+        return name;
     }
+
+    public int getTotalPrice() {
+        return price * quantity;
+    }
+
+
 }
