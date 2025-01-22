@@ -8,6 +8,6 @@ public class AccountMain {
         account.withdraw(9000);
         account.withdraw(2000); //오류 메시지 출력 후 출금 안됨
         System.out.println("잔고: " + account.balance);
-
     }
 }
+
