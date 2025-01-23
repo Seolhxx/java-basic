@@ -1,25 +1,42 @@
 package static2.ex;
 
 public class MathArrayUtils {
+    private MathArrayUtils() {
+        //private 인스턴스 생성을 막는다.
+        //의도전달 : static 메소드를 불러써라
+    }
 
-    public static int sum(int[] array) {
-        int sum = 0;
-        for (int i = 0; i <= array.length; i++) {
-            sum += i;
+    public static int sum(int[] values) {
+
+        int total = 0;
+        for (int value : values) {
+            total += value;
         }
-        return sum;
+        return total;
     }
 
-    public static int average(int[] array) {
-
-        return result;
+    public static double average(int[] values) {
+        return (double) sum(values) / values.length;
     }
 
-    public static int min(int[] array) {
-        return result;
+    public static int min(int[] values) {
+        int minValue = values[0];
+        for (int value : values) {
+            if (value < minValue) {
+                minValue = value;
+            }
+        }
+        return minValue;
     }
 
-    public static int max(int[] array) {
-        return result;
+    public static int max(int[] values) {
+        int maxValue = values[0];
+        for (int value : values) {
+            if (value > maxValue) {
+                maxValue = value;
+            }
+        }
+        return maxValue;
     }
+
 }
